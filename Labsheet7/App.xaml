@@ -4,6 +4,39 @@
              xmlns:local="clr-namespace:Labsheet7"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="stackItemsTop" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Margin" Value="2"></Setter>
+            <Setter Property="Width" Value="auto"></Setter>
+        </Style>
+        <Style x:Key="stackItemsBottom" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Margin" Value="2"></Setter>
+            <Setter Property="Width" Value="auto"></Setter>
+        </Style>
+        <Style x:Key="stackItems" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Margin" Value="15"></Setter>
+            <Setter Property="Width" Value="auto"></Setter>
+        </Style>
+        <Style x:Key="listBoxesTop" TargetType="ListBox">
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+        <Style x:Key="categoryLabels" TargetType="Label">
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="Crimson"/>
+        </Style>
     </Application.Resources>
 </Application>

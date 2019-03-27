@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Style="{StaticResource stackItemsTop}" Grid.Column="0" Grid.Row="0">
+            <StackPanel Style="{StaticResource stackItems}">
+                <Label Name="stockLevelLbl" Content="Stock Level" Style="{StaticResource categoryLabels}"/>
+                <ListBox Name="stockLevelsLbx" Style="{StaticResource listBoxesTop}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource stackItems}">
+                <Label Name="suppliersLbl" Content="Supplier" Style="{StaticResource categoryLabels}"/>
+                <ListBox Name="suppliersLbx" Style="{StaticResource listBoxesTop}"></ListBox>
+            </StackPanel>
+            <StackPanel Style="{StaticResource stackItems}">
+                <Label Name="CountryLbl" Content="Country" Style="{StaticResource categoryLabels}"/>
+                <ListBox Name="countriesLbx" Style="{StaticResource listBoxesTop}"></ListBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Style="{StaticResource stackItemsBottom}">
+            <Label Name="productsLbl" Content="Products" Style="{StaticResource categoryLabels}"/>
+            <ListBox Name="ProductsLbx" Style="{StaticResource listBoxesTop}"></ListBox>
+        </StackPanel>
+
     </Grid>
+    
 </Window>
