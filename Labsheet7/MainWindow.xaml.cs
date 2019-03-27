@@ -24,5 +24,13 @@ namespace Labsheet7
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //stocke level lbx
+            stockLevelsLbx.ItemsSource = Enum.GetNames(typeof(StockLevel));
+
+            var query1 = 
+        }
     }
 }
