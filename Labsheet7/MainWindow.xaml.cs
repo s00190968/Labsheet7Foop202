@@ -78,8 +78,12 @@ namespace Labsheet7
         {
             int supplierID = Convert.ToInt32(suppliersLbx.SelectedValue);
 
-            var q = db.Products.Where(p => p.SupplierID.Equals(supplierID)).OrderBy(p => p.ProductName)
+            var q = db.Products
+                .Where(p => p.SupplierID == supplierID)
+                .OrderBy(p => p.ProductName)
                 .Select(p => p.ProductName);
+
+            var results = q.ToList();
 
             ProductsLbx.ItemsSource = q.ToList();
         }
