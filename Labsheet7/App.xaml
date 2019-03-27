@@ -29,8 +29,8 @@
             <Setter Property="Width" Value="auto"></Setter>
         </Style>
         <Style x:Key="listBoxesTop" TargetType="ListBox">
-            <Setter Property="Margin" Value="2"/>
-            <Setter Property="Width" Value="auto"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="200"/>
             <Setter Property="Padding" Value="2"/>
         </Style>
         <Style x:Key="categoryLabels" TargetType="Label">

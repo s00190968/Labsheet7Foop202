@@ -49,5 +49,48 @@ namespace Labsheet7
 
             countriesLbx.ItemsSource = countries.Distinct();
         }
+
+        private void stockLevelsLbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var query = db.Products.Where(p => p.UnitsInStock < 50).OrderBy(p => p.ProductName).Select(p => p.ProductName);
+            string selected = stockLevelsLbx.SelectedItem as string;
+
+            switch (selected)
+            {
+                case "Low":
+                    //do nothing here!
+                    break;
+                case "Normal":
+                    query = db.Products.Where(p => p.UnitsInStock >= 50 && p.UnitsInStock <= 100)
+                        .OrderBy(p => p.ProductName).Select(p => p.ProductName);
+                    break;
+                case "Overstocked":
+                    query = db.Products.Where(p => p.UnitsInStock > 100)
+                        .OrderBy(p => p.ProductName).Select(p => p.ProductName);
+                    break;
+            }
+
+            //update products list
+            ProductsLbx.ItemsSource = query.ToList();
+        }
+
+        private void suppliersLbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int supplierID = Convert.ToInt32(suppliersLbx.SelectedValue);
+
+            var q = db.Products.Where(p => p.SupplierID.Equals(supplierID)).OrderBy(p => p.ProductName)
+                .Select(p => p.ProductName);
+
+            ProductsLbx.ItemsSource = q.ToList();
+        }
+
+        private void countriesLbx_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string country = (string)(countriesLbx.SelectedValue);
+            var q = db.Products.Where(p => p.Supplier.Country.Equals(country))
+                .OrderBy(p => p.ProductName).Select(p => p.ProductName);
+
+            ProductsLbx.ItemsSource = q.ToList();
+        }
     }
 }
