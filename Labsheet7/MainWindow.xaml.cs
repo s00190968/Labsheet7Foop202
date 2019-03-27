@@ -18,8 +18,10 @@ namespace Labsheet7
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    public enum StockLevel { Low, Normal, Overstocked };
     public partial class MainWindow : Window
     {
+        NORTHWNDEntities db = new NORTHWNDEntities();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,7 +32,22 @@ namespace Labsheet7
             //stocke level lbx
             stockLevelsLbx.ItemsSource = Enum.GetNames(typeof(StockLevel));
 
-            var query1 = 
+            //suppliers listbox
+            var query1 = db.Suppliers.OrderBy(s => s.CompanyName)
+                .Select(s => new
+                {
+                    SupplierName = s.CompanyName,
+                    SupplierID = s.SupplierID,
+                    Country = s.Country
+                });
+
+            suppliersLbx.ItemsSource = query1.ToList();
+
+            //countries lbx
+            var query2 = query1.OrderBy(s => s.Country).Select(s => s.Country);
+            var countries = query2.ToList();
+
+            countriesLbx.ItemsSource = countries.Distinct();
         }
     }
 }

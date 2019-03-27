@@ -21,7 +21,7 @@
             </StackPanel>
             <StackPanel Style="{StaticResource stackItems}">
                 <Label Name="suppliersLbl" Content="Supplier" Style="{StaticResource categoryLabels}"/>
-                <ListBox Name="suppliersLbx" Style="{StaticResource listBoxesTop}"></ListBox>
+                <ListBox Name="suppliersLbx" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierID" Style="{StaticResource listBoxesTop}"></ListBox>
             </StackPanel>
             <StackPanel Style="{StaticResource stackItems}">
                 <Label Name="CountryLbl" Content="Country" Style="{StaticResource categoryLabels}"/>
