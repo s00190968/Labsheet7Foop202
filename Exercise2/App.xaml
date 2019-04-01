@@ -1,0 +1,47 @@
+﻿<Application x:Class="Exercise2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Exercise2"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="stackItemsTop" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Margin" Value="2"></Setter>
+            <Setter Property="Width" Value="*"></Setter>
+        </Style>
+        <Style x:Key="stackItemsBottom" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Margin" Value="2"></Setter>
+            <Setter Property="Width" Value="*"></Setter>
+        </Style>
+        <Style x:Key="stackItems" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Vertical"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="auto"/>
+            <Setter Property="Margin" Value="15"></Setter>
+            <Setter Property="Width" Value="auto"></Setter>
+        </Style>
+        <Style x:Key="listBoxes" TargetType="ListBox">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="200"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+        <Style x:Key="listboxOrderDetails" TargetType="ListBox">
+            <Setter Property="Width" Value="600"/>
+            <Setter Property="Height" Value="170"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+        <Style x:Key="categoryLabels" TargetType="Label">
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="Crimson"/>
+        </Style>
+    </Application.Resources>
+</Application>

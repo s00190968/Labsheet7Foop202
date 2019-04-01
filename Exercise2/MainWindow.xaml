@@ -1,0 +1,34 @@
+﻿<Window x:Class="Exercise2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Style="{StaticResource stackItemsTop}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1">
+            <StackPanel Style="{StaticResource stackItems}">
+                <Label Name="customersLbl" Content="Stock Level" Style="{StaticResource categoryLabels}"/>
+                <ListBox Name="customersLbx" Style="{StaticResource listBoxes}"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource stackItems}">
+                <Label Name="orderSummaryLbl" Content="Order Summary" Style="{StaticResource categoryLabels}"/>
+                <ListBox Name="orderSummaryLbx" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierID" Style="{StaticResource listBoxes}"></ListBox>
+            </StackPanel>
+            <StackPanel Style="{StaticResource stackItems}"/>
+        </StackPanel>
+        <StackPanel Style="{StaticResource stackItemsBottom}" Grid.Column="1" Grid.Row="0">
+            <Label Name="orderDetailLbl" Content="Order Details" Style="{StaticResource categoryLabels}"/>
+            <ListBox Name="OrderDetailLbx" Style="{StaticResource listboxOrderDetails}"></ListBox>
+        </StackPanel>
+    </Grid>
+</Window>
