@@ -10,15 +10,15 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Height" Value="auto"/>
             <Setter Property="Margin" Value="2"></Setter>
-            <Setter Property="Width" Value="*"></Setter>
+            <Setter Property="Width" Value="650"></Setter>
         </Style>
         <Style x:Key="stackItemsBottom" TargetType="StackPanel">
             <Setter Property="Orientation" Value="Vertical"/>
-            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Height" Value="auto"/>
             <Setter Property="Margin" Value="2"></Setter>
-            <Setter Property="Width" Value="*"></Setter>
+            <Setter Property="Width" Value="650"></Setter>
         </Style>
         <Style x:Key="stackItems" TargetType="StackPanel">
             <Setter Property="Orientation" Value="Vertical"/>
@@ -33,7 +33,7 @@
             <Setter Property="Height" Value="200"/>
             <Setter Property="Padding" Value="2"/>
         </Style>
-        <Style x:Key="listboxOrderDetails" TargetType="ListBox">
+        <Style x:Key="listboxOrderDetails" TargetType="DataGrid">
             <Setter Property="Width" Value="600"/>
             <Setter Property="Height" Value="170"/>
             <Setter Property="Padding" Value="2"/>

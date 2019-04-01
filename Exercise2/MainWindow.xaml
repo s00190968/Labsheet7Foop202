@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Exercise2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ADVENTURE" Height="auto" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -18,17 +18,17 @@
         <StackPanel Style="{StaticResource stackItemsTop}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1">
             <StackPanel Style="{StaticResource stackItems}">
                 <Label Name="customersLbl" Content="Stock Level" Style="{StaticResource categoryLabels}"/>
-                <ListBox Name="customersLbx" Style="{StaticResource listBoxes}"/>
+                <ListBox Name="customersLbx" Style="{StaticResource listBoxes}" SelectionChanged="CustomersLbx_SelectionChanged"/>
             </StackPanel>
             <StackPanel Style="{StaticResource stackItems}">
                 <Label Name="orderSummaryLbl" Content="Order Summary" Style="{StaticResource categoryLabels}"/>
-                <ListBox Name="orderSummaryLbx" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierID" Style="{StaticResource listBoxes}"></ListBox>
+                <ListBox Name="orderSummaryLbx" SelectedValuePath="SalesOrderID" Style="{StaticResource listBoxes}" SelectionChanged="OrderSummaryLbx_SelectionChanged"></ListBox>
             </StackPanel>
             <StackPanel Style="{StaticResource stackItems}"/>
         </StackPanel>
-        <StackPanel Style="{StaticResource stackItemsBottom}" Grid.Column="1" Grid.Row="0">
+        <StackPanel Style="{StaticResource stackItemsBottom}" Grid.Column="0" Grid.Row="1">
             <Label Name="orderDetailLbl" Content="Order Details" Style="{StaticResource categoryLabels}"/>
-            <ListBox Name="OrderDetailLbx" Style="{StaticResource listboxOrderDetails}"></ListBox>
+            <DataGrid Name="OrderDetailLbx" Style="{StaticResource listboxOrderDetails}"></DataGrid>
         </StackPanel>
     </Grid>
 </Window>

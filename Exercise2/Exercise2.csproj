@@ -99,6 +99,7 @@
     <Compile Include="ErrorLog.cs">
       <DependentUpon>ADVENTURE.tt</DependentUpon>
     </Compile>
+    <Compile Include="PartialClasses\SalesOrderHeader.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>ADVENTURE.tt</DependentUpon>
     </Compile>
