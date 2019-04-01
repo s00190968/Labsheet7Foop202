@@ -15,10 +15,10 @@ namespace Labsheet7
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class NORTHWNDEntities : DbContext
+    public partial class NORTHWNDEntities1 : DbContext
     {
-        public NORTHWNDEntities()
-            : base("name=NORTHWNDEntities")
+        public NORTHWNDEntities1()
+            : base("name=NORTHWNDEntities1")
         {
         }
     
@@ -41,14 +41,14 @@ namespace Labsheet7
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Territory> Territories { get; set; }
     
-        [DbFunction("NORTHWNDEntities", "ProductsUnderThisUnitPrice")]
+        [DbFunction("NORTHWNDEntities1", "ProductsUnderThisUnitPrice")]
         public virtual IQueryable<ProductsUnderThisUnitPrice_Result> ProductsUnderThisUnitPrice(Nullable<decimal> price)
         {
             var priceParameter = price.HasValue ?
                 new ObjectParameter("price", price) :
                 new ObjectParameter("price", typeof(decimal));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<ProductsUnderThisUnitPrice_Result>("[NORTHWNDEntities].[ProductsUnderThisUnitPrice](@price)", priceParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<ProductsUnderThisUnitPrice_Result>("[NORTHWNDEntities1].[ProductsUnderThisUnitPrice](@price)", priceParameter);
         }
     
         public virtual ObjectResult<Customers_By_City_Result> Customers_By_City(string param1)

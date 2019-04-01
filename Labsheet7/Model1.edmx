@@ -837,7 +837,7 @@
           <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
           <End Role="Territories" Type="Self.Territory" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="NORTHWNDEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="NORTHWNDEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Contacts" EntityType="Self.Contact" />
           <EntitySet Name="CustomerDemographics" EntityType="Self.CustomerDemographic" />
@@ -1054,7 +1054,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="NORTHWNDModelStoreContainer" CdmEntityContainer="NORTHWNDEntities">
+        <EntityContainerMapping StorageEntityContainer="NORTHWNDModelStoreContainer" CdmEntityContainer="NORTHWNDEntities1">
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="NORTHWNDModel.Category">
               <MappingFragment StoreEntitySet="Categories">

@@ -21,7 +21,7 @@ namespace Labsheet7
     public enum StockLevel { Low, Normal, Overstocked };
     public partial class MainWindow : Window
     {
-        NORTHWNDEntities db = new NORTHWNDEntities();
+        NORTHWNDEntities1 db = new NORTHWNDEntities1();
         public MainWindow()
         {
             InitializeComponent();
